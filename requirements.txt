@@ -1,7 +1,7 @@
 # ─────────────────────────────────────────────────────────────────
 # Legal SLM — Requirements
-# Tested: macOS (M1/M2/M3/M4 Apple Silicon), macOS Intel, Windows 10/11
-# Python: 3.10 / 3.11 / 3.12  (do NOT use 3.13 — paddle breaks)
+# Tested: macOS (M1/M2/M3/M4 Apple Silicon)
+# Python: 3.11 (do NOT use 3.13 — paddle breaks)
 # ─────────────────────────────────────────────────────────────────
 
 # ── Web server ────────────────────────────────────────────────────
