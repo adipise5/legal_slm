@@ -1,0 +1,61 @@
+# ─────────────────────────────────────────────────────────────────
+# Legal SLM — Requirements
+# Tested: macOS (M1/M2/M3/M4 Apple Silicon), macOS Intel, Windows 10/11
+# Python: 3.10 / 3.11 / 3.12  (do NOT use 3.13 — paddle breaks)
+# ─────────────────────────────────────────────────────────────────
+
+# ── Web server ────────────────────────────────────────────────────
+Flask==3.0.3
+Flask-Cors==4.0.1
+Werkzeug==3.0.3
+
+# ── Vector database ───────────────────────────────────────────────
+qdrant-client==1.10.1
+
+# ── PDF extraction ────────────────────────────────────────────────
+PyMuPDF==1.24.9
+
+# ── Image processing ─────────────────────────────────────────────
+# NOTE: paddleocr 3.x hard-pins opencv-contrib-python==4.10.0.84
+# Do NOT install plain opencv-python separately — it will conflict.
+# paddleocr installs the right opencv variant automatically.
+Pillow==10.4.0
+scipy==1.13.1
+
+# ── OCR engines ───────────────────────────────────────────────────
+pytesseract==0.3.13
+easyocr==1.7.2
+
+# PaddleOCR + PaddlePaddle
+# Windows/macOS CPU-only (no GPU build needed — M4 uses CPU path):
+paddlepaddle==3.0.0
+paddleocr==3.4.0
+
+# ── Embeddings + reranking ────────────────────────────────────────
+sentence-transformers==3.0.1
+transformers==4.44.2
+einops==0.8.0          # required by nomic-embed-text-v1.5
+
+# ── PyTorch ───────────────────────────────────────────────────────
+# Platform-specific — see INSTALL NOTES below for Windows vs Mac.
+# The line below installs the correct CPU/MPS build on most systems:
+torch==2.4.0
+
+# ── BM25 keyword search ───────────────────────────────────────────
+rank-bm25==0.2.2
+
+# ── HTTP (Ollama calls) ───────────────────────────────────────────
+requests==2.32.3
+
+# ── Utilities ─────────────────────────────────────────────────────
+numpy==1.26.4           # do NOT upgrade to 2.x — breaks torch + paddle
+tqdm==4.66.4
+
+# ─────────────────────────────────────────────────────────────────
+# REMOVED (not used anywhere in this project):
+#   langchain, langchain-community, langchain-core, langsmith
+#   fastapi, uvicorn
+#   pandas, scikit-learn
+#   python-dotenv
+#   beautifulsoup4, lxml
+# ─────────────────────────────────────────────────────────────────

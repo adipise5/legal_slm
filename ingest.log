@@ -1,0 +1,20 @@
+[33mChecking connectivity to the model hosters, this may take a while. To bypass this check, set `PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK` to `True`.[0m
+WARNING:root:[PaddleOCR] Not importable: No module named 'langchain.docstore' — will use EasyOCR fallback.
+
+═════════════════════════════════════════════════════════════════
+  LEGAL SLM — PARALLEL INGESTION  (v2 · PaddleOCR primary)
+═════════════════════════════════════════════════════════════════
+  Workers:       4
+  Embed batch:   256
+  PDF directory: data/legal_pdfs
+═════════════════════════════════════════════════════════════════
+
+[Embedder] Loading nomic-ai/nomic-embed-text-v1.5 on mps
+WARNING:transformers_modules.nomic_hyphen_ai.nomic_hyphen_bert_hyphen_2048.7710840340a098cfb869c4f65e87cf2b1b70caca.modeling_hf_nomic_bert:<All keys matched successfully>
+[Scan] Found 2,000 total PDFs
+[New]  2,000 files to process
+
+[33mConnectivity check to the model hoster has been skipped because `PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK` is enabled.[0m
+WARNING:root:[PaddleOCR] Not importable: No module named 'langchain.docstore' — will use EasyOCR fallback.
+PaddleOCR is not installed. Install with: pip install paddlepaddle paddleocr
+Exception in thread collector:
